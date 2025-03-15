@@ -1,4 +1,4 @@
-# Midterm Lab Task 2: Data Cleaning and Preparation Using POWER QUER
+# Midterm Lab Task 2: Data Cleaning and Preparation Using POWER QUERY
 This portfolio highlights the application of data cleaning and transformation in a transactional database using Power Query. The dataset includes several related tables, each structured to optimize data organization and remove redundancy.
 
 ## STEP 1. Data Cleaning Process
