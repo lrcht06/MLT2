@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midterm Lab Task 1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="stars"></div>
+  <div id="twinkling"></div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="assets/ITbgmusic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1 class="clickable">Midterm Lab Task 2: Data Cleaning and Preparation Using POWER QUERY</h1>
+    <p>This portfolio highlights the application of data cleaning and transformation in a transactional database using Power Query. The dataset includes several related tables, each structured to optimize data organization and remove redundancy.</p>
+
+    <hr />
+
+    <h2 class="clickable">STEP 1. Data Cleaning Process</h2>
+    <p>Load the raw dataset into Power Query and duplicate it for reference.</p>
+    <p>Clean the Salary Estimate column by extracting only numeric values.</p>
+    <p>Create two new columns: Min Sal and Max Sal, based on extracted salary data.</p>
+    <p>Add a new column for Role Type by categorizing job titles into predefined groups.</p>
+    <p>Standardize the Location column by handling exceptions and splitting data properly.</p>
+    <p>Normalize company size by creating MinCompanySize and MaxCompanySize columns.</p>
+    <p>Handle missing and negative values by filtering or replacing them appropriately.</p>
+    <p>Clean company names by removing extra details like ratings.</p>
+    <p>Remove unnecessary columns such as job descriptions to refine the dataset.</p>
+
+    <hr />
+
+    <h2 class="clickable">STEP 2. Transformation</h2>
+    <p>Create a duplicate dataset for role-based salary analysis and select relevant columns.</p>
+    <p>Convert salary values to currency format and adjust them for consistency.</p>
+    <p>Group by Role Type to calculate average minimum and maximum salaries.</li>
+    <p>Create a reference dataset for company size-based salary analysis and apply grouping.</p>
+    <p>Map state abbreviations to full names by merging with a reference dataset.</p>
+    <p>Filter out null or blank state values to ensure data accuracy.</li>
+    <p>Create a reference dataset for state-based salary analysis, grouping data accordingly.</p>
+   
+   
+    <hr />
+    
+   <h2 class="clickable">STEP 3. Here is the screenshot of my output before I started data cleaning (see screenshot)</h2>
+   <div class="image-column">
+      <img src="images/Turla%20(UD).png" alt="STEP 3. Here is the screenshot of my output before i started data cleaning (see screenshot)" />
+   </div>
+
+    <hr />
+    
+   <h2 class="clickable">STEP 4. Here is the screenshot of my output after I started data cleaning (see screenshot)</h2>
+   <div class="image-column">
+      <img src="images/Turla%20(CD).png" alt="STEP 4. Here is the screenshot of my output after I started data cleaning (see screenshot)" />
+   </div>
+
+    <hr />
+
+   <h2 class="clickable">STEP 5. Here is the screenshot of the advanced editor code of power query steps (see screenshot)</h2>
+   <div class="image-column">
+      <img src="images/Turla%20(AES).png" alt="Here is the Physical Data Model" />
+   </div>
+
+   <hr />
+
+   <h2 class="clickable">STEP 6. Final Structured Tables</h2>
+    <div class="image-column">
+      <h3>Sales By Role Type dup</h3>
+      <img src="images/Turla%20(SBRTd).png" alt="Sales By Role Type dup" />
+      <h3>Sales By Role Size ref</h3>
+      <img src="images/Turla%20(SBSizer).png" alt="Sales By Role Size ref" />
+      <h3>states</h3>
+      <img src="images/Turla%20(s).png" alt="states" />
+      <h3>Sales By States ref</h3>
+      <img src="images/Turla%20(SBStater).png" alt="Sales By States ref" />
+    </div>
+
+   <hr />
+
+   <h2 class="clickable">Here is the Queries' Dependencies and References</h2>
+   <div class="image-column">
+      <img src="images/Turla%20(QD).png" alt="Here is the Physical Data Model" />
+   </div>
+     
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const trail = document.createElement("div");
+      trail.className = "cursor-trail";
+      trail.style.left = `${e.pageX}px`;
+      trail.style.top = `${e.pageY}px`;
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 1000);
+    });
+
+    document.querySelectorAll(".clickable").forEach(el => {
+      el.addEventListener("click", () => {
+        el.classList.add("clicked");
+        setTimeout(() => el.classList.remove("clicked"), 300);
+      });
+    });
+  </script>
+</body>
+</html>
